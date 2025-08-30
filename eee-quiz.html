@@ -278,10 +278,10 @@ const hardQuestions = [
 
   function pickRandom(arr,n){ const copy=[...arr], res=[]; for(let i=0;i<n && copy.length>0;i++){ const idx=Math.floor(Math.random()*copy.length); res.push(copy.splice(idx,1)[0]); } return res; }
 
-  let questions=[], currentIndex=0, score=0, timer, timeLeft=15;
+  let questions=[], currentIndex=0, score=0, timer, timeLeft=30;
   const questionEl=document.getElementById("question"), optionsEl=document.getElementById("options"), scoreEl=document.getElementById("score"), timerEl=document.getElementById("timer"), playAgainContainer=document.getElementById("playAgainContainer");
 
-  function startTimer(){ clearInterval(timer); timeLeft=15; timerEl.textContent=timeLeft; timer=setInterval(()=>{ timeLeft--; timerEl.textContent=timeLeft; if(timeLeft<=0){ clearInterval(timer); nextQuestion(); } },1000); }
+  function startTimer(){ clearInterval(timer); timeLeft=30; timerEl.textContent=timeLeft; timer=setInterval(()=>{ timeLeft--; timerEl.textContent=timeLeft; if(timeLeft<=0){ clearInterval(timer); nextQuestion(); } },1000); }
 
   function loadQuestion(){ const q=questions[currentIndex]; optionsEl.innerHTML=""; questionEl.textContent=q.text; q.options.forEach((opt,i)=>{ const card=document.createElement("div"); card.className="card"; const front=document.createElement("div"); front.className="face front"; front.textContent=opt; const back=document.createElement("div"); back.className="face back"; back.textContent=(i===q.correct)?"Correct!":"Wrong!"; card.appendChild(front); card.appendChild(back); card.addEventListener("click",()=>selectOption(card,i)); optionsEl.appendChild(card); }); startTimer(); }
 
@@ -323,4 +323,5 @@ function goToDepartments() {
 
 </body>
 </html>
+
 
