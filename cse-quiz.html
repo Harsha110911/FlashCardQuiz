@@ -286,7 +286,7 @@ const questionsArr = [
 let currentIndex = 0;
 let score = 0;
 let timer;
-let timeLeft = 15;
+let timeLeft = 30;
 
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
@@ -296,7 +296,7 @@ const playAgainContainer = document.getElementById("playAgainContainer");
 
 function startTimer() {
   clearInterval(timer);
-  timeLeft = 15;
+  timeLeft = 30;
   timerEl.textContent = timeLeft;
   timer = setInterval(() => {
     timeLeft--;
@@ -371,4 +371,5 @@ loadQuestion();
 </script>
 </body>
 </html>
+
 
