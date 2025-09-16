@@ -232,42 +232,42 @@ animate(0);
 
 // ===== Quiz Logic =====
 const easyQuestions = [
-  { text: "Which law explains the relationship between pressure and volume of gases?", options: ["Boyle's Law", "Newton's Law", "Ohm's Law", "Hooke's Law"], correct: 0 },
-  { text: "Which instrument is used to measure temperature?", options: ["Thermometer", "Barometer", "Manometer", "Hygrometer"], correct: 0 },
-  { text: "What type of energy does a moving object have?", options: ["Kinetic Energy", "Potential Energy", "Thermal Energy", "Nuclear Energy"], correct: 0 },
-  { text: "Which metal is primarily used in making aircraft?", options: ["Aluminum", "Copper", "Iron", "Lead"], correct: 0 },
-  { text: "Which of these is a heat engine?", options: ["IC Engine", "Motor", "Battery", "Pump"], correct: 0 },
-  { text: "What does CAD stand for?", options: ["Computer-Aided Design", "Central Axis Design", "Current Angular Dynamics", "Controlled Automatic Draft"], correct: 0 },
-  { text: "What is used to reduce friction between moving parts?", options: ["Lubricants", "Magnets", "Springs", "Clamps"], correct: 0 },
-  { text: "Which is stronger: cast iron or mild steel?", options: ["Mild Steel", "Cast Iron", "Aluminum", "Copper"], correct: 1 },
-  { text: "What does CNC stand for?", options: ["Computer Numerical Control", "Central Network Control", "Control Node Circuit", "Computer Number Code"], correct: 0 },
-  { text: "Which unit is used for force?", options: ["Newton", "Pascal", "Joule", "Watt"], correct: 0 },
-  { text: "What is the function of a flywheel?", options: ["Store Energy", "Increase Speed", "Reduce Weight", "Control Temperature"], correct: 0 },
-  { text: "Which is NOT a simple machine?", options: ["Pulley", "Lever", "Gearbox", "Inclined Plane"], correct: 2 },
-  { text: "Which metal is commonly used in bearings?", options: ["Babbitt Metal", "Lead", "Steel", "Brass"], correct: 0 },
-  { text: "Which is the hardest material known?", options: ["Diamond", "Steel", "Graphite", "Tungsten"], correct: 0 },
-  { text: "What is the SI unit of power?", options: ["Watt", "Joule", "Newton", "Pascal"], correct: 0 }
+  { text: "Which law explains the relationship between pressure and volume of gases?", options: ["Newton's Law", "Hooke's Law", "Ohm's Law", "Boyle's Law"], correct: 3 },
+  { text: "Which instrument is used to measure temperature?", options: ["Manometer", "Thermometer", "Hygrometer", "Barometer"], correct: 1 },
+  { text: "What type of energy does a moving object have?", options: ["Kinetic Energy", "Thermal Energy", "Potential Energy", "Nuclear Energy"], correct: 0 },
+  { text: "Which metal is primarily used in making aircraft?", options: ["Aluminum", "Lead", "Iron", "Copper"], correct: 0 },
+  { text: "Which of these is a heat engine?", options: ["Battery", "Pump", "Motor", "IC Engine"], correct: 3 },
+  { text: "What does CAD stand for?", options: ["Current Angular Dynamics", "Computer-Aided Design", "Controlled Automatic Draft", "Central Axis Design"], correct: 1 },
+  { text: "What is used to reduce friction between moving parts?", options: ["Clamps", "Lubricants", "Magnets", "Springs"], correct: 1 },
+  { text: "Which is stronger: cast iron or mild steel?", options: ["Aluminum", "Copper", "Cast Iron", "Mild Steel"], correct: 2 },
+  { text: "What does CNC stand for?", options: ["Computer Numerical Control", "Computer Number Code", "Central Network Control", "Control Node Circuit"], correct: 0 },
+  { text: "Which unit is used for force?", options: ["Pascal", "Newton", "Joule", "Watt"], correct: 1 },
+  { text: "What is the function of a flywheel?", options: ["Store Energy", "Control Temperature", "Reduce Weight", "Increase Speed"], correct: 0 },
+  { text: "Which is NOT a simple machine?", options: ["Inclined Plane", "Pulley", "Gearbox", "Lever"], correct: 2 },
+  { text: "Which metal is commonly used in bearings?", options: ["Brass", "Steel", "Lead", "Babbitt Metal"], correct: 3 },
+  { text: "Which is the hardest material known?", options: ["Tungsten", "Steel", "Diamond", "Graphite"], correct: 2 },
+  { text: "What is the SI unit of power?", options: ["Newton", "Watt", "Pascal", "Joule"], correct: 1 }
 ];
 
 const mediumQuestions = [
-  { text: "Which cycle is used in petrol engines?", options: ["Otto Cycle", "Rankine Cycle", "Diesel Cycle", "Brayton Cycle"], correct: 0 },
-  { text: "Which mechanical property is tested using a Charpy test?", options: ["Impact Strength", "Hardness", "Elasticity", "Ductility"], correct: 0 },
-  { text: "Which device converts reciprocating motion into rotary motion?", options: ["Crankshaft", "Camshaft", "Gear", "Flywheel"], correct: 0 },
-  { text: "Which mechanism is used in shaping machines?", options: ["Quick Return Mechanism", "Four-Bar Mechanism", "Crank & Slotted Link", "Cam Mechanism"], correct: 0 },
-  { text: "Which material is commonly used for making cutting tools?", options: ["High-Speed Steel", "Aluminum", "Copper", "Lead"], correct: 0 },
-  { text: "Which law of thermodynamics defines entropy?", options: ["Second Law", "First Law", "Third Law", "Zeroth Law"], correct: 0 },
-  { text: "Which welding process uses a filler rod and electric arc?", options: ["MIG Welding", "TIG Welding", "Gas Welding", "Spot Welding"], correct: 0 },
+  { text: "Which cycle is used in petrol engines?", options: ["Diesel Cycle", "Otto Cycle", "Brayton Cycle", "Rankine Cycle"], correct: 1 },
+  { text: "Which mechanical property is tested using a Charpy test?", options: ["Elasticity", "Ductility", "Impact Strength", "Hardness"], correct: 2 },
+  { text: "Which device converts reciprocating motion into rotary motion?", options: ["Gear", "Camshaft", "Flywheel", "Crankshaft"], correct: 3 },
+  { text: "Which mechanism is used in shaping machines?", options: ["Cam Mechanism", "Quick Return Mechanism", "Four-Bar Mechanism", "Crank & Slotted Link"], correct: 1 },
+  { text: "Which material is commonly used for making cutting tools?", options: ["High-Speed Steel", "Lead", "Copper", "Aluminum"], correct: 0 },
+  { text: "Which law of thermodynamics defines entropy?", options: ["Second Law", "Zeroth Law", "Third Law", "First Law"], correct: 0 },
+  { text: "Which welding process uses a filler rod and electric arc?", options: ["Gas Welding", "MIG Welding", "TIG Welding", "Spot Welding"], correct: 1 },
   { text: "Which type of stress is produced in a thin cylindrical vessel under pressure?", options: ["Hoop Stress", "Shear Stress", "Bending Stress", "Torsional Stress"], correct: 0 },
-  { text: "What is the function of a governor in engines?", options: ["Control Speed", "Reduce Fuel", "Increase Torque", "Cool Engine"], correct: 0 },
-  { text: "Which bearing is suitable for high radial load?", options: ["Ball Bearing", "Roller Bearing", "Thrust Bearing", "Magnetic Bearing"], correct: 1 }
+  { text: "What is the function of a governor in engines?", options: ["Increase Torque", "Cool Engine", "Reduce Fuel", "Control Speed"], correct: 3 },
+  { text: "Which bearing is suitable for high radial load?", options: ["Ball Bearing", "Thrust Bearing", "Roller Bearing", "Magnetic Bearing"], correct: 2 }
 ];
 
 const hardQuestions = [
-  { text: "Which law defines the efficiency limit of heat engines?", options: ["Second Law of Thermodynamics", "First Law of Thermodynamics", "Newton’s Law of Cooling", "Hooke’s Law"], correct: 0 },
-  { text: "Which type of welding uses non-consumable tungsten electrodes?", options: ["TIG Welding", "MIG Welding", "Arc Welding", "Gas Welding"], correct: 0 },
-  { text: "Which governor is most sensitive among mechanical types?", options: ["Hartnell Governor", "Watt Governor", "Porter Governor", "Proell Governor"], correct: 0 },
-  { text: "Which stress-strain region shows permanent deformation?", options: ["Plastic Region", "Elastic Region", "Proportional Limit", "Resilience Region"], correct: 0 },
-  { text: "What is the efficiency of a Carnot engine operating between 800K and 400K?", options: ["50%", "25%", "75%", "33%"], correct: 0 }
+  { text: "Which law defines the efficiency limit of heat engines?", options: ["First Law of Thermodynamics", "Hooke’s Law", "Second Law of Thermodynamics", "Newton’s Law of Cooling"], correct: 2 },
+  { text: "Which type of welding uses non-consumable tungsten electrodes?", options: ["MIG Welding", "Gas Welding", "Arc Welding", "TIG Welding"], correct: 3 },
+  { text: "Which governor is most sensitive among mechanical types?", options: ["Watt Governor", "Hartnell Governor", "Proell Governor", "Porter Governor"], correct: 1 },
+  { text: "Which stress-strain region shows permanent deformation?", options: ["Plastic Region", "Resilience Region", "Proportional Limit", "Elastic Region"], correct: 0 },
+  { text: "What is the efficiency of a Carnot engine operating between 800K and 400K?", options: ["25%", "75%", "33%", "50%"], correct: 3 }
 ];
 
 
@@ -392,5 +392,6 @@ loadQuestion();
 
 </body>
 </html>
+
 
 
