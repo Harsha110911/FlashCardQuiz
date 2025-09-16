@@ -275,7 +275,6 @@ const hardQuestions = [
   { text:"Which protection device isolates a faulty section in transmission lines?", options:["Circuit Breaker","Relay","Fuse","Isolator"], correct:0 }
 ];
 
-
   function pickRandom(arr,n){ const copy=[...arr], res=[]; for(let i=0;i<n && copy.length>0;i++){ const idx=Math.floor(Math.random()*copy.length); res.push(copy.splice(idx,1)[0]); } return res; }
 
   let questions=[], currentIndex=0, score=0, timer, timeLeft=30;
@@ -323,5 +322,6 @@ function goToDepartments() {
 
 </body>
 </html>
+
 
 
