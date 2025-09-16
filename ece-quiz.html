@@ -214,41 +214,44 @@ draw();
 
 /* ================== Quiz Logic ================== */
 const easyQuestions = [
-  {text:"What does ECE stand for?",options:["Electronics and Communication Engineering","Electrical and Civil Engineering","Electronic Computer Engineering","Engineering Circuit Electronics"],correct:0},
-  {text:"What is the basic unit of current?",options:["Ampere","Volt","Ohm","Watt"],correct:0},
-  {text:"What is the unit of resistance?",options:["Ohm","Ampere","Volt","Watt"],correct:0},
-  {text:"Which device converts AC to DC?",options:["Rectifier","Transformer","Capacitor","Inductor"],correct:0},
-  {text:"Which device stores electrical energy?",options:["Capacitor","Resistor","Inductor","Diode"],correct:0},
-  {text:"Which component allows current to flow in one direction?",options:["Diode","Resistor","Capacitor","Transistor"],correct:0},
-  {text:"Which is a semiconductor material?",options:["Silicon","Copper","Aluminum","Iron"],correct:0},
-  {text:"Which device amplifies current?",options:["Transistor","Diode","Resistor","Capacitor"],correct:0},
-  {text:"What is the symbol for resistor in a circuit?",options:["Zigzag line","Straight line","Triangle","Circle"],correct:0},
-  {text:"Which wave carries radio signals?",options:["Electromagnetic wave","Sound wave","Mechanical wave","Water wave"],correct:0},
-  {text:"Which law relates voltage, current, and resistance?",options:["Ohm's Law","Kirchhoff's Law","Faraday's Law","Coulomb's Law"],correct:0},
-  {text:"Which device is used to measure voltage?",options:["Voltmeter","Ammeter","Wattmeter","Galvanometer"],correct:0},
-  {text:"Which logic gate gives output HIGH only when all inputs are HIGH?",options:["AND","OR","NOT","NAND"],correct:0},
-  {text:"Which component opposes current flow?",options:["Resistor","Diode","Capacitor","Inductor"],correct:0},
-  {text:"Which device is used to step up voltage?",options:["Transformer","Rectifier","Diode","Transistor"],correct:0}
+  {text:"What does ECE stand for?",options:["Engineering Circuit Electronics","Electronic Computer Engineering","Electronics and Communication Engineering","Electrical and Civil Engineering"],correct:2},
+  {text:"What is the basic unit of current?",options:["Volt","Ohm","Ampere","Watt"],correct:2},
+  {text:"What is the unit of resistance?",options:["Watt","Ampere","Ohm","Volt"],correct:2},
+  {text:"Which device converts AC to DC?",options:["Inductor","Rectifier","Capacitor","Transformer"],correct:1},
+  {text:"Which device stores electrical energy?",options:["Resistor","Capacitor","Diode","Inductor"],correct:1},
+  {text:"Which component allows current to flow in one direction?",options:["Resistor","Transistor","Diode","Capacitor"],correct:2},
+  {text:"Which is a semiconductor material?",options:["Aluminum","Iron","Copper","Silicon"],correct:3},
+  {text:"Which device amplifies current?",options:["Resistor","Capacitor","Transistor","Diode"],correct:2},
+  {text:"What is the symbol for resistor in a circuit?",options:["Circle","Triangle","Zigzag line","Straight line"],correct:2},
+  {text:"Which wave carries radio signals?",options:["Sound wave","Mechanical wave","Electromagnetic wave","Water wave"],correct:2},
+  {text:"Which law relates voltage, current, and resistance?",options:["Faraday's Law","Ohm's Law","Kirchhoff's Law","Coulomb's Law"],correct:1},
+  {text:"Which device is used to measure voltage?",options:["Galvanometer","Voltmeter","Wattmeter","Ammeter"],correct:1},
+  {text:"Which logic gate gives output HIGH only when all inputs are HIGH?",options:["NOT","OR","AND","NAND"],correct:2},
+  {text:"Which component opposes current flow?",options:["Capacitor","Diode","Inductor","Resistor"],correct:3},
+  {text:"Which device is used to step up voltage?",options:["Rectifier","Diode","Transformer","Transistor"],correct:2}
 ];
+
 const mediumQuestions = [
-  {text:"Which type of transistor is widely used in amplification?",options:["BJT","FET","MOSFET","All of these"],correct:0},
-  {text:"Which filter allows high frequency signals to pass?",options:["High-pass filter","Low-pass filter","Band-pass filter","Notch filter"],correct:0},
-  {text:"Which modulation is used in FM radio?",options:["Frequency Modulation","Amplitude Modulation","Pulse Modulation","Phase Modulation"],correct:0},
-  {text:"What is the function of an op-amp?",options:["Amplification","Rectification","Switching","Timing"],correct:0},
-  {text:"Which law is used for loop analysis in circuits?",options:["Kirchhoff's Voltage Law","Ohm's Law","Faraday's Law","Coulomb's Law"],correct:0},
-  {text:"Which component stores energy in magnetic field?",options:["Inductor","Capacitor","Resistor","Diode"],correct:0},
-  {text:"Which is a digital signal?",options:["Square wave","Sine wave","Triangle wave","Sawtooth wave"],correct:0},
-  {text:"Which technique is used to reduce noise in communication?",options:["Shielding","Amplification","Rectification","Modulation"],correct:0},
-  {text:"Which device converts digital signal to analog?",options:["DAC","ADC","Transistor","Op-amp"],correct:0},
-  {text:"Which is used to store binary data temporarily?",options:["Flip-flop","Diode","Resistor","Capacitor"],correct:0}
+  {text:"Which type of transistor is widely used in amplification?",options:["BJT","MOSFET","FET","All of these"],correct:0},
+  {text:"Which filter allows high frequency signals to pass?",options:["Notch filter","Band-pass filter","Low-pass filter","High-pass filter"],correct:3},
+  {text:"Which modulation is used in FM radio?",options:["Phase Modulation","Pulse Modulation","Frequency Modulation","Amplitude Modulation"],correct:2},
+  {text:"What is the function of an op-amp?",options:["Switching","Timing","Amplification","Rectification"],correct:2},
+  {text:"Which law is used for loop analysis in circuits?",options:["Faraday's Law","Ohm's Law","Coulomb's Law","Kirchhoff's Voltage Law"],correct:3},
+  {text:"Which component stores energy in magnetic field?",options:["Inductor","Diode","Capacitor","Resistor"],correct:0},
+  {text:"Which is a digital signal?",options:["Triangle wave","Sawtooth wave","Square wave","Sine wave"],correct:2},
+  {text:"Which technique is used to reduce noise in communication?",options:["Shielding","Rectification","Amplification","Modulation"],correct:0},
+  {text:"Which device converts digital signal to analog?",options:["ADC","Transistor","DAC","Op-amp"],correct:2},
+  {text:"Which is used to store binary data temporarily?",options:["Capacitor","Diode","Flip-flop","Resistor"],correct:2}
 ];
+
 const hardQuestions = [
-  {text:"Which modulation is more resistant to noise?",options:["Frequency Modulation","Amplitude Modulation","Pulse Modulation","Phase Modulation"],correct:0},
-  {text:"What is the gain of an ideal op-amp in open loop?",options:["Infinity","1","0","100"],correct:0},
-  {text:"Which method is used for error detection in digital communication?",options:["Parity check","Amplification","Modulation","Filtering"],correct:0},
-  {text:"Which type of memory is volatile and fast?",options:["SRAM","ROM","EEPROM","Flash"],correct:0},
-  {text:"Which filter allows a specific frequency range to pass?",options:["Band-pass filter","Low-pass filter","High-pass filter","Notch filter"],correct:0}
+  {text:"Which modulation is more resistant to noise?",options:["Pulse Modulation","Amplitude Modulation","Phase Modulation","Frequency Modulation"],correct:3},
+  {text:"What is the gain of an ideal op-amp in open loop?",options:["0","Infinity","1","100"],correct:1},
+  {text:"Which method is used for error detection in digital communication?",options:["Filtering","Modulation","Parity check","Amplification"],correct:2},
+  {text:"Which type of memory is volatile and fast?",options:["EEPROM","ROM","Flash","SRAM"],correct:3},
+  {text:"Which filter allows a specific frequency range to pass?",options:["High-pass filter","Band-pass filter","Notch filter","Low-pass filter"],correct:1}
 ];
+
 function pickRandom(arr,n){
   const copy=[...arr];
   const result=[];
@@ -338,5 +341,6 @@ initQuiz();
 </script>
 </body>
 </html>
+
 
 
