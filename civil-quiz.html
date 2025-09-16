@@ -190,43 +190,44 @@
 
     // ===== Questions =====
 const easyQuestions = [
-  { text: "What does CE stand for?", options: ["Civil Engineering","Computer Engineering","Chemical Engineering","Construction Engineering"], correct: 0 },
-  { text: "Which material is used for making concrete?", options: ["Cement, Sand, Gravel","Steel, Copper, Aluminum","Plastic, Rubber, Glass","Wood, Clay, Stone"], correct: 0 },
-  { text: "Which instrument measures angles in surveying?", options: ["Theodolite","Voltmeter","Micrometer","Tachometer"], correct: 0 },
-  { text: "Which component transfers loads from structure to ground?", options: ["Foundation","Beam","Column","Slab"], correct: 0 },
-  { text: "Which soil type is strong and stable for construction?", options: ["Rocky Soil","Clay","Peat","Sandy Soil"], correct: 0 },
-  { text: "Which tool measures distances on site?", options: ["Tape Measure","Compass","Protractor","Spirit Level"], correct: 0 },
-  { text: "Which component resists vertical loads in a building?", options: ["Column","Slab","Beam","Roof"], correct: 0 },
-  { text: "Which material is commonly used for reinforcement in concrete?", options: ["Steel","Wood","Plastic","Glass"], correct: 0 },
-  { text: "Which type of roof helps in rainwater drainage?", options: ["Sloped","Flat","Domed","Shed"], correct: 0 },
-  { text: "Which instrument checks level surfaces?", options: ["Spirit Level","Tape Measure","Hammer","Chisel"], correct: 0 },
-  { text: "Which component mixes cement, sand, and water?", options: ["Concrete Mixer","Trowel","Hammer","Drill"], correct: 0 },
-  { text: "Which building block is the basic unit of construction?", options: ["Brick","Beam","Slab","Column"], correct: 0 },
-  { text: "Which is a natural building material?", options: ["Sand","Cement","Steel","Plastic"], correct: 0 },
-  { text: "Which instrument measures vertical height differences?", options: ["Leveling Instrument","Voltmeter","Compass","Protractor"], correct: 0 },
-  { text: "Which system is used to protect against water seepage?", options: ["Waterproofing","Drainage","Insulation","Ventilation"], correct: 0 }
+  { text: "What does CE stand for?", options: ["Chemical Engineering","Civil Engineering","Construction Engineering","Computer Engineering"], correct: 1 },
+  { text: "Which material is used for making concrete?", options: ["Cement, Sand, Gravel","Steel, Copper, Aluminum","Wood, Clay, Stone","Plastic, Rubber, Glass"], correct: 0 },
+  { text: "Which instrument measures angles in surveying?", options: ["Micrometer","Theodolite","Voltmeter","Tachometer"], correct: 1 },
+  { text: "Which component transfers loads from structure to ground?", options: ["Column","Slab","Foundation","Beam"], correct: 2 },
+  { text: "Which soil type is strong and stable for construction?", options: ["Clay","Peat","Rocky Soil","Sandy Soil"], correct: 2 },
+  { text: "Which tool measures distances on site?", options: ["Spirit Level","Compass","Tape Measure","Protractor"], correct: 2 },
+  { text: "Which component resists vertical loads in a building?", options: ["Column","Roof","Beam","Slab"], correct: 0 },
+  { text: "Which material is commonly used for reinforcement in concrete?", options: ["Glass","Plastic","Wood","Steel"], correct: 3 },
+  { text: "Which type of roof helps in rainwater drainage?", options: ["Domed","Flat","Sloped","Shed"], correct: 2 },
+  { text: "Which instrument checks level surfaces?", options: ["Hammer","Chisel","Spirit Level","Tape Measure"], correct: 2 },
+  { text: "Which component mixes cement, sand, and water?", options: ["Drill","Concrete Mixer","Hammer","Trowel"], correct: 1 },
+  { text: "Which building block is the basic unit of construction?", options: ["Beam","Column","Brick","Slab"], correct: 2 },
+  { text: "Which is a natural building material?", options: ["Steel","Sand","Plastic","Cement"], correct: 1 },
+  { text: "Which instrument measures vertical height differences?", options: ["Voltmeter","Leveling Instrument","Compass","Protractor"], correct: 1 },
+  { text: "Which system is used to protect against water seepage?", options: ["Insulation","Waterproofing","Drainage","Ventilation"], correct: 1 }
 ];
 
 const mediumQuestions = [
-  { text: "Which type of beam projects out without support at one end?", options: ["Cantilever Beam","Simply Supported Beam","Fixed Beam","Continuous Beam"], correct: 0 },
-  { text: "Which test determines soil bearing capacity?", options: ["Plate Load Test","Moisture Test","pH Test","Compression Test"], correct: 0 },
-  { text: "Which structural member is used to support roofs in triangular framework?", options: ["Truss","Column","Beam","Slab"], correct: 0 },
-  { text: "Which method strengthens weak soil?", options: ["Compaction","Painting","Hammering","Polishing"], correct: 0 },
-  { text: "Which load is temporary, caused by people or furniture?", options: ["Live Load","Dead Load","Wind Load","Seismic Load"], correct: 0 },
-  { text: "Which material is used for waterproofing?", options: ["Bitumen","Sand","Steel","Cement"], correct: 0 },
-  { text: "Which type of foundation is shallow?", options: ["Shallow Foundation","Deep Foundation","Pile Foundation","Raft Foundation"], correct: 0 },
-  { text: "Which modulus measures stiffness of material?", options: ["Modulus of Elasticity","Bulk Modulus","Shear Modulus","Poisson's Ratio"], correct: 0 },
-  { text: "Which device reduces vibrations in buildings?", options: ["Damper","Beam","Column","Slab"], correct: 0 },
-  { text: "Which analysis calculates forces in complex structures?", options: ["Structural Analysis","Surveying","Leveling","Compaction"], correct: 0 }
+  { text: "Which type of beam projects out without support at one end?", options: ["Cantilever Beam","Continuous Beam","Simply Supported Beam","Fixed Beam"], correct: 0 },
+  { text: "Which test determines soil bearing capacity?", options: ["Moisture Test","Compression Test","Plate Load Test","pH Test"], correct: 2 },
+  { text: "Which structural member is used to support roofs in triangular framework?", options: ["Slab","Beam","Truss","Column"], correct: 2 },
+  { text: "Which method strengthens weak soil?", options: ["Hammering","Compaction","Polishing","Painting"], correct: 1 },
+  { text: "Which load is temporary, caused by people or furniture?", options: ["Seismic Load","Live Load","Wind Load","Dead Load"], correct: 1 },
+  { text: "Which material is used for waterproofing?", options: ["Bitumen","Steel","Sand","Cement"], correct: 0 },
+  { text: "Which type of foundation is shallow?", options: ["Pile Foundation","Deep Foundation","Raft Foundation","Shallow Foundation"], correct: 3 },
+  { text: "Which modulus measures stiffness of material?", options: ["Poisson's Ratio","Modulus of Elasticity","Bulk Modulus","Shear Modulus"], correct: 1 },
+  { text: "Which device reduces vibrations in buildings?", options: ["Damper","Slab","Column","Beam"], correct: 0 },
+  { text: "Which analysis calculates forces in complex structures?", options: ["Leveling","Surveying","Compaction","Structural Analysis"], correct: 3 }
 ];
 
 const hardQuestions = [
   { text: "Which factors affect load-bearing capacity of soil?", options: ["Cohesion and friction","Color","Moisture only","Temperature"], correct: 0 },
-  { text: "What is the advantage of pre-stressed concrete?", options: ["Better tensile strength","Cheaper material","Faster construction","Lightweight"], correct: 0 },
-  { text: "Which method analyzes stresses in complex structures?", options: ["Finite Element Analysis","Manual calculation","Graph plotting","Surveying"], correct: 0 },
-  { text: "Which load is due to earthquake?", options: ["Seismic Load","Dead Load","Live Load","Wind Load"], correct: 0 },
-  { text: "Which test evaluates concrete strength?", options: ["Compressive Strength Test","Tensile Test","Bending Test","Shear Test"], correct: 0 }
+  { text: "What is the advantage of pre-stressed concrete?", options: ["Lightweight","Cheaper material","Faster construction","Better tensile strength"], correct: 3 },
+  { text: "Which method analyzes stresses in complex structures?", options: ["Graph plotting","Surveying","Finite Element Analysis","Manual calculation"], correct: 2 },
+  { text: "Which load is due to earthquake?", options: ["Wind Load","Dead Load","Seismic Load","Live Load"], correct: 2 },
+  { text: "Which test evaluates concrete strength?", options: ["Shear Test","Tensile Test","Bending Test","Compressive Strength Test"], correct: 3 }
 ];
+
 
 
     function pickRandom(arr, n) {
@@ -328,5 +329,6 @@ const hardQuestions = [
   </script>
 </body>
 </html>
+
 
 
