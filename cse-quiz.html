@@ -229,43 +229,44 @@
    Quiz Logic
 ================================ */
 const easyQuestions = [
-  { text: "What does CPU stand for?", options: ["Central Processing Unit","Computer Personal Unit","Control Processing Unit","Central Performance Unit"], correct: 0 },
-  { text: "What does RAM stand for?", options: ["Random Access Memory","Read Access Memory","Read And Modify","Rapid Access Memory"], correct: 0 },
-  { text: "Which language is used for web development?", options: ["HTML","C++","Python","Java"], correct: 0 },
-  { text: "What is the extension of a Python file?", options: [".py",".java",".cpp",".html"], correct: 0 },
-  { text: "What is the full form of HTTPS?", options: ["HyperText Transfer Protocol Secure","HyperText Transfer Protocol Standard","HyperText Transmission Protocol Secure","HyperText Transfer Process Secure"], correct: 0 },
-  { text: "Which tag is used for a paragraph in HTML?", options: ["<p>","<div>","<h1>","<span>"], correct: 0 },
-  { text: "Which of these is an input device?", options: ["Keyboard","Monitor","Printer","Speaker"], correct: 0 },
-  { text: "Which of these is a programming language?", options: ["Python","Windows","Excel","Chrome"], correct: 0 },
-  { text: "What is the binary representation of decimal 5?", options: ["101","010","111","110"], correct: 0 },
-  { text: "Which of these is a search engine?", options: ["Google","Python","HTML","Windows"], correct: 0 },
-  { text: "Which part of the computer is known as the brain?", options: ["CPU","RAM","Hard Disk","Motherboard"], correct: 0 },
-  { text: "Which of these is an operating system?", options: ["Windows","Python","HTML","Excel"], correct: 0 },
-  { text: "Which of these stores data permanently?", options: ["Hard Disk","RAM","Cache","CPU"], correct: 0 },
-  { text: "Which company developed Java programming language?", options: ["Sun Microsystems","Microsoft","Apple","IBM"], correct: 0 },
-  { text: "Which is the largest unit of data?", options: ["Terabyte","Gigabyte","Megabyte","Kilobyte"], correct: 0 }
+  { text: "What does CPU stand for?", options: ["Computer Personal Unit","Central Processing Unit","Central Performance Unit","Control Processing Unit"], correct: 1 },
+  { text: "What does RAM stand for?", options: ["Read And Modify","Read Access Memory","Random Access Memory","Rapid Access Memory"], correct: 2 },
+  { text: "Which language is used for web development?", options: ["HTML","Java","C++","Python"], correct: 0 },
+  { text: "What is the extension of a Python file?", options: [".java",".html",".cpp",".py"], correct: 3 },
+  { text: "What is the full form of HTTPS?", options: ["HyperText Transfer Process Secure","HyperText Transfer Protocol Secure","HyperText Transmission Protocol Secure","HyperText Transfer Protocol Standard"], correct: 1 },
+  { text: "Which tag is used for a paragraph in HTML?", options: ["<h1>","<div>","<p>","<span>"], correct: 2 },
+  { text: "Which of these is an input device?", options: ["Keyboard","Speaker","Printer","Monitor"], correct: 0 },
+  { text: "Which of these is a programming language?", options: ["Python","Chrome","Excel","Windows"], correct: 0 },
+  { text: "What is the binary representation of decimal 5?", options: ["101","111","110","010"], correct: 0 },
+  { text: "Which of these is a search engine?", options: ["HTML","Windows","Python","Google"], correct: 3 },
+  { text: "Which part of the computer is known as the brain?", options: ["Hard Disk","CPU","RAM","Motherboard"], correct: 1 },
+  { text: "Which of these is an operating system?", options: ["Python","Excel","Windows","HTML"], correct: 2 },
+  { text: "Which of these stores data permanently?", options: ["Hard Disk","RAM","CPU","Cache"], correct: 0 },
+  { text: "Which company developed Java programming language?", options: ["Microsoft","Apple","IBM","Sun Microsystems"], correct: 3 },
+  { text: "Which is the largest unit of data?", options: ["Gigabyte","Kilobyte","Terabyte","Megabyte"], correct: 2 }
 ];
 
 const mediumQuestions = [
-  { text: "What is the time complexity of linear search?", options: ["O(n)","O(log n)","O(1)","O(n^2)"], correct: 0 },
-  { text: "Which data structure uses FIFO?", options: ["Queue","Stack","Tree","Graph"], correct: 0 },
-  { text: "Which of these is NOT a type of database?", options: ["Relational","Hierarchical","Object-Oriented","Sequential Access"], correct: 3 },
-  { text: "Which HTTP status code indicates 'Not Found'?", options: ["404","200","500","301"], correct: 0 },
-  { text: "Which sorting algorithm has the best average case for large datasets?", options: ["Merge Sort","Bubble Sort","Selection Sort","Insertion Sort"], correct: 0 },
-  { text: "What is the output of 5 & 3 in binary AND operation?", options: ["1","0","3","5"], correct: 0 },
-  { text: "Which of these is used to style HTML elements?", options: ["CSS","JavaScript","Python","SQL"], correct: 0 },
-  { text: "Which is a NoSQL database?", options: ["MongoDB","MySQL","Oracle","PostgreSQL"], correct: 0 },
-  { text: "Which of these is a markup language?", options: ["HTML","C++","Python","Java"], correct: 0 },
-  { text: "Which of these memory is volatile?", options: ["RAM","Hard Disk","ROM","Flash Drive"], correct: 0 }
+  { text: "What is the time complexity of linear search?", options: ["O(n^2)","O(n)","O(log n)","O(1)"], correct: 1 },
+  { text: "Which data structure uses FIFO?", options: ["Tree","Queue","Stack","Graph"], correct: 1 },
+  { text: "Which of these is NOT a type of database?", options: ["Object-Oriented","Relational","Sequential Access","Hierarchical"], correct: 2 },
+  { text: "Which HTTP status code indicates 'Not Found'?", options: ["301","404","500","200"], correct: 1 },
+  { text: "Which sorting algorithm has the best average case for large datasets?", options: ["Bubble Sort","Insertion Sort","Merge Sort","Selection Sort"], correct: 2 },
+  { text: "What is the output of 5 & 3 in binary AND operation?", options: ["1","3","5","0"], correct: 0 },
+  { text: "Which of these is used to style HTML elements?", options: ["Python","JavaScript","CSS","SQL"], correct: 2 },
+  { text: "Which is a NoSQL database?", options: ["PostgreSQL","Oracle","MySQL","MongoDB"], correct: 3 },
+  { text: "Which of these is a markup language?", options: ["HTML","Python","C++","Java"], correct: 0 },
+  { text: "Which of these memory is volatile?", options: ["RAM","ROM","Flash Drive","Hard Disk"], correct: 0 }
 ];
 
 const hardQuestions = [
-  { text: "What is the space complexity of merge sort?", options: ["O(n)","O(log n)","O(1)","O(n log n)"], correct: 0 },
-  { text: "Which of these is a correct expression for polymorphism in OOP?", options: ["Overloading and Overriding","Inheritance only","Encapsulation only","Abstraction only"], correct: 0 },
-  { text: "Which of these is NOT a characteristic of a stack?", options: ["FIFO","LIFO","Push","Pop"], correct: 0 },
-  { text: "Which hashing technique resolves collisions using linked lists?", options: ["Chaining","Open Addressing","Double Hashing","Linear Probing"], correct: 0 },
-  { text: "In a binary search tree, what is the maximum number of nodes at level L?", options: ["2^L","L^2","L","2L"], correct: 0 }
+  { text: "What is the space complexity of merge sort?", options: ["O(n log n)","O(1)","O(n)","O(log n)"], correct: 2 },
+  { text: "Which of these is a correct expression for polymorphism in OOP?", options: ["Encapsulation only","Inheritance only","Overloading and Overriding","Abstraction only"], correct: 2 },
+  { text: "Which of these is NOT a characteristic of a stack?", options: ["FIFO","Push","LIFO","Pop"], correct: 0 },
+  { text: "Which hashing technique resolves collisions using linked lists?", options: ["Chaining","Double Hashing","Linear Probing","Open Addressing"], correct: 0 },
+  { text: "In a binary search tree, what is the maximum number of nodes at level L?", options: ["L","2L","L^2","2^L"], correct: 3 }
 ];
+
 
 function pickRandom(arr, n) {
   const copy = [...arr];
@@ -371,5 +372,6 @@ loadQuestion();
 </script>
 </body>
 </html>
+
 
 
